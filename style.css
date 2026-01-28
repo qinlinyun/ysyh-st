@@ -1,0 +1,609 @@
+/* ==================== 滚动条样式 ==================== */
+@media only screen and (min-width: 767px) {
+  pre::-webkit-scrollbar-track-piece,
+  html::-webkit-scrollbar-track-piece,
+  #sidebar::-webkit-scrollbar-track-piece {
+    background: #eee;
+  }
+
+  pre::-webkit-scrollbar,
+  html::-webkit-scrollbar,
+  #sidebar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  pre::-webkit-scrollbar-thumb,
+  html::-webkit-scrollbar-thumb,
+  #sidebar::-webkit-scrollbar-thumb {
+    height: 40px;
+    border-radius: 4px;
+    background-color: #A5A5A5;
+  }
+
+  pre::-webkit-scrollbar-thumb:hover,
+  html::-webkit-scrollbar-thumb:hover,
+  #sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #bbb;
+  }
+}
+
+.OwO-items::-webkit-scrollbar-track-piece {
+  background: #eee;
+}
+
+.OwO-items::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.OwO-items::-webkit-scrollbar-thumb {
+  height: 40px;
+  border-radius: 4px;
+  background-color: #A5A5A5;
+}
+
+.OwO-items::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+
+/* ==================== 按钮样式 ==================== */
+.button-list .btn {
+  margin-bottom: 12px;
+  margin-right: 8px;
+}
+
+/* ==================== 卡片基础样式 ==================== */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ==================== 全局背景图片 ==================== */
+body {
+  background-color: #ffffff; /* 更改为白色背景 */
+}
+
+/* ==================== 毛玻璃效果 ==================== */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+[data-leftbar-theme=dark] .glass-effect {
+  background: rgba(49, 58, 70, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card.glass-effect {
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .glass-effect {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+}
+
+/* ==================== 分页按钮 ==================== */
+.pagination li:first-child a {
+  margin-left: 0;
+  border-top-left-radius: .25rem;
+  border-bottom-left-radius: .25rem;
+}
+
+.pagination li:last-child a {
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+.pagination li a {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #313a46;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.pagination .active a {
+  z-index: 1;
+  color: #fff;
+  background-color: #727cf5;
+  border-color: #727cf5;
+}
+
+/* ==================== 表情样式 ==================== */
+.OwO {
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.OwO.OwO-open .OwO-body {
+  display: block;
+}
+
+.OwO.OwO-up .OwO-body {
+  top: inherit;
+  bottom: 21px;
+  border-radius: 4px 4px 4px 0;
+}
+
+.OwO.OwO-up .OwO-body .OwO-bar .OwO-packages li:nth-child(1) {
+  border-radius: 0;
+}
+
+.OwO.OwO-up.OwO-open .OwO-logo {
+  border: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+  border-top: none;
+}
+
+.OwO .OwO-logo {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.OwO .OwO-logo:hover span {
+  display: inline-block;
+  -webkit-animation: a 5s infinite ease-in-out;
+  animation: a 5s infinite ease-in-out;
+}
+
+.OwO .OwO-body {
+  display: none;
+  position: relative;
+  max-width: 400px;
+  background: #fff;
+  border: 1px solid #ddd;
+  z-index: 1;
+  border-radius: 0 4px 4px 4px;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(114, 124, 245, .5);
+  box-shadow: 0 2px 6px 0 rgba(114, 124, 245, .5);
+}
+
+.OwO .OwO-body .OwO-items {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+  padding: 10px;
+  margin: 0;
+  overflow-y: scroll;
+  font-size: 0;
+}
+
+.OwO .OwO-body .OwO-items .OwO-item {
+  list-style-type: none;
+  background: #f7f7f7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0 10px 12px 0;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.OwO .OwO-body .OwO-items .OwO-item:hover {
+  background: #eee;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14),
+              0 3px 1px -2px rgba(0, 0, 0, .2),
+              0 1px 5px 0 rgba(0, 0, 0, .12);
+  -webkit-animation: a 5s infinite ease-in-out;
+  animation: a 5s infinite ease-in-out;
+}
+
+.OwO .OwO-body .OwO-items-emoji .OwO-item {
+  font-size: 20px;
+  line-height: 19px;
+}
+
+.OwO .OwO-body .OwO-items-image .OwO-item {
+  max-width: calc(25% - 10px);
+  box-sizing: border-box;
+}
+
+.OwO .OwO-body .OwO-items-image .OwO-item img {
+  max-width: 100%;
+}
+
+.OwO .OwO-body .OwO-items-show {
+  display: block;
+}
+
+.OwO .OwO-body .OwO-bar {
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  color: #444;
+}
+
+.OwO .OwO-body .OwO-bar .OwO-packages {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.OwO .OwO-body .OwO-bar .OwO-packages li {
+  list-style-type: none;
+  display: inline-block;
+  line-height: 30px;
+  font-size: 14px;
+  padding: 0 10px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.OwO .OwO-body .OwO-bar .OwO-packages li:nth-child(1) {
+  border-radius: 0 0 0 3px;
+}
+
+.OwO .OwO-body .OwO-bar .OwO-packages li:hover {
+  background: #eee;
+}
+
+.OwO .OwO-body .OwO-bar .OwO-packages .OwO-package-active {
+  background: #eee;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+/* ==================== 布局样式 ==================== */
+.col-1-5,
+.col-sm-1-5,
+.col-md-1-5,
+.col-lg-1-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-1-5 {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 20%;
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+@media (min-width: 768px) {
+  .col-sm-1-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-1-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-1-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+/* ==================== 图片样式 ==================== */
+img.biaoqing {
+  height: 30px;
+}
+
+img.b-lazy {
+  background: #fff url(./img/loading.gif) no-repeat center;
+}
+
+.link img.b-lazy {
+  background: #fff url(./img/tx.jpg) no-repeat center;
+  background-size: 100%;
+}
+
+.p-1 .mb-1 img.b-lazy.ojbk,
+.comment-list img.b-lazy.ojbk {
+  background: #e8ecf3;
+}
+
+/* ==================== 评论样式 ==================== */
+#cancel-comment-reply-link {
+  display: inline !important;
+}
+
+ol.comment-list {
+  padding: 0;
+}
+
+ol.comment-list p {
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+}
+
+.comment-children {
+  margin-left: 4.5rem;
+}
+
+.comment-children .comment-children {
+  margin-left: 0;
+}
+
+.page-navigator>li {
+  display: none;
+}
+
+.page-navigator>.next {
+  display: block;
+}
+
+/* ==================== 友链样式 ==================== */
+.mb-1 img {
+  width: 100px;
+  height: 100%;
+}
+
+/* ==================== 卡片内容样式 ==================== */
+a .card-title {
+  color: #6c757d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge-secondary-lighten a,
+.badge-primary-lighten a {
+  color: inherit;
+}
+
+.slr {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.lunbo img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.card-img-bili {
+  padding-bottom: 164.32%;
+  position: relative;
+  transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+
+.card-img-bili .card-img-top {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  img.card-img-top {
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
+.y10r5 {
+  -moz-box-shadow: 0 0 10px #9a9a9a;
+  box-shadow: 0 0 10px #9a9a9a;
+  border-radius: 5px;
+}
+
+.zhuangtai {
+  position: absolute;
+  right: 3px;
+  background: #ff8100;
+  color: #fff;
+  padding: 1px 3px;
+  border-radius: 0 0 5px 5px;
+  font-size: 10px;
+}
+
+img.tuijian {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card-img-bili .over {
+  bottom: 0;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity .3s ease;
+  -webkit-transition: opacity .3s ease;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.15;
+  padding: 5px 0;
+}
+
+.card-img-bili .over .title {
+  color: #fff;
+}
+
+.card-img-bili:hover {
+  -webkit-transform: scale(1.05, 1.05);
+  -moz-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+}
+
+.card-body img {
+  max-width: 100%;
+}
+
+.fm {
+  width: auto;
+  height: 192px;
+  float: left;
+  margin: 20px 20px 20px 20px;
+}
+
+.youlink a {
+  margin-right: .5rem;
+}
+
+.reply2view {
+  display: inline-block;
+  text-align: center;
+  border: 2px dashed #f1f3fa;
+  padding: 5px;
+  margin-bottom: 10px;
+  color: #F77;
+  width: 100%;
+  font-size: 16px;
+}
+
+.reply2view-ok fieldset {
+  display: inline-block;
+  border: 2px dashed #f1f3fa;
+  padding: 5px;
+  width: 100%;
+}
+
+.reply2view-ok fieldset legend {
+  font-size: 12px;
+  padding: 5px;
+  color: #F77;
+  border: 1px solid #f1f3fa;
+  line-height: 12px;
+  border-radius: 2px;
+  width: auto;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .dn1024 {
+    display: none
+  }
+}
+
+/* ==================== 文章格式 ==================== */
+.card-body.post,
+.card-body.page {
+  font-size: 1rem;
+  color: #444444;
+}
+
+code {
+  color: #727cf5;
+  background-color: rgba(114, 124, 245, .18);
+  padding: auto 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-radius: 3px;
+  margin: 0 3px;
+}
+
+pre code {
+  color: initial;
+  background-color: initial;
+  padding: initial;
+  padding-left: initial;
+  padding-right: initial;
+  border-radius: initial;
+  margin: initial;
+}
+
+.card-body.post h1,
+.card-body.post h2,
+.card-body.post h3,
+.card-body.post h4,
+.card-body.post h5,
+.card-body.post h6,
+.card-body.page h1,
+.card-body.page h2,
+.card-body.page h3,
+.card-body.page h4,
+.card-body.page h5,
+.card-body.page h6 {
+  margin-top: 2.5rem;
+}
+
+.card-body.post p,
+.card-body.page p {
+  margin-bottom: 0;
+  margin-top: .5rem;
+}
+
+blockquote {
+  border-left: 4px solid #f1f3fa;
+  color: #777;
+  padding: 1rem 1.5rem;
+  margin-top: .5rem;
+}
+
+.blur-2 {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+.respond {
+  position: relative;
+}
+
+.sign-comment {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 30%;
+  z-index: 2;
+  text-align: center;
+}
+
+/* ==================== 手机样式 ==================== */
+@media only screen and (max-width: 767px) {
+  #comments .comment-parent {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #b3b3b3;
+  }
+  
+  .comment-children {
+    margin-left: 0;
+  }
+}
